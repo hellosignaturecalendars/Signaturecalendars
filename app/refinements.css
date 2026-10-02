@@ -1827,3 +1827,100 @@ hr {
   background: var(--hover);
   color: #fff;
 }
+
+/* ── Mobile improvements (max 480px — small phones) ── */
+@media (max-width: 480px) {
+  /* Steps: 1 column on very small screens */
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .steps > div {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .step-num {
+    border-bottom: none;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+
+  /* Section separators */
+  .section {
+    border-top: 1px solid var(--line);
+  }
+  .product-section {
+    border-top: 1px solid var(--line);
+  }
+  .quality-band {
+    border-top: 2px solid var(--line);
+    border-bottom: 2px solid var(--line);
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .contact-band {
+    border-radius: 8px;
+    margin: 0 4% 40px;
+  }
+  .value-strip {
+    border-top: 2px solid var(--line);
+    border-bottom: 2px solid var(--line);
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  footer {
+    padding-top: 30px;
+    border-top: 2px solid var(--line);
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  /* Typography */
+  h1, .hero h1, .page-intro h1, .detail-layout h1 {
+    font-size: 30px;
+    letter-spacing: -0.8px;
+  }
+  h2, .section-heading h2, .contact-band h2 {
+    font-size: 24px;
+  }
+
+  /* Nav */
+  .header nav {
+    top: 100%;
+    gap: 10px;
+  }
+}
+
+/* ── Medium mobile (481–720px) ── */
+@media (min-width: 481px) and (max-width: 720px) {
+  /* Steps: 2x2 grid */
+  .steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 24px;
+  }
+
+  /* Section separators */
+  .section {
+    border-top: 1px solid var(--line);
+  }
+  .quality-band {
+    border-top: 2px solid var(--line);
+    border-bottom: 2px solid var(--line);
+  }
+  footer {
+    border-top: 2px solid var(--line);
+    padding-top: 30px;
+  }
+  .value-strip {
+    border-top: 2px solid var(--line);
+    border-bottom: 2px solid var(--line);
+  }
+}
