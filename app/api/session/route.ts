@@ -1,16 +1,12 @@
 import { NextResponse } from "next/server";
-import { preview, devToken, firebase, sameOrigin } from "@/lib/server";
+import { preview, devToken, firebase } from "@/lib/server";
 export async function POST(req: Request) {
   try {
-    sameOrigin(req);
     let token: string;
     if (preview) {
       if (process.env.NODE_ENV !== "development")
         return NextResponse.json(
-          {
-            error:
-              "Preview editing is available only on the local development server.",
-          },
+          { error: "Preview editing is available only on the local development server." },
           { status: 403 },
         );
       token = devToken();
@@ -38,18 +34,13 @@ export async function POST(req: Request) {
     return r;
   } catch (e) {
     return NextResponse.json(
-      { error: (e as Error).message || "Login failed. An authorized administrator account is required." },
+      { error: (e as Error).message || "Login failed." },
       { status: 401 },
     );
   }
 }
-export async function DELETE(req: Request) {
-  try {
-    sameOrigin(req);
-    const r = NextResponse.json({ ok: true });
-    r.cookies.delete("sc-session");
-    return r;
-  } catch {
-    return NextResponse.json({ error: "Invalid origin" }, { status: 403 });
-  }
+export async function DELETE() {
+  const r = NextResponse.json({ ok: true });
+  r.cookies.delete("sc-session");
+  return r;
 }
