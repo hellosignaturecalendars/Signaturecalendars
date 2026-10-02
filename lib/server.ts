@@ -165,12 +165,17 @@ export async function requireAdmin() {
 }
 export function sameOrigin(req: Request) {
   const origin = req.headers.get("origin");
-  const allowed =
-    process.env.NODE_ENV === "development"
-      ? ["http://127.0.0.1:3000", "http://localhost:3000", "http://127.0.0.1:3001", "http://localhost:3001"]
-      : [process.env.SITE_URL || new URL(req.url).origin];
-  if (!origin || !allowed.includes(origin))
+  if (!origin) throw Error("Invalid request origin");
+  if (process.env.NODE_ENV === "development") {
+    const devOrigins = ["http://127.0.0.1:3000", "http://localhost:3000", "http://127.0.0.1:3001", "http://localhost:3001"];
+    if (devOrigins.includes(origin)) return;
     throw Error("Invalid request origin");
+  }
+  // Production: allow SITE_URL or the request's own origin (covers all vercel.app preview URLs)
+  const siteUrl = (process.env.SITE_URL || "").replace(/\/$/, "");
+  const requestOrigin = new URL(req.url).origin;
+  const allowed = [...(siteUrl ? [siteUrl] : []), requestOrigin];
+  if (!allowed.includes(origin)) throw Error("Invalid request origin");
 }
 const limits = new Map<string, { count: number; start: number }>();
 export async function rateLimit(key: string) {
