@@ -1,8 +1,0 @@
-node_modules/
-.next/
-.env*
-!.env.example
-.data/
-playwright-report/
-test-results/
-*.tsbuildinfo
