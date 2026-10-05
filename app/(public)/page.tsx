@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { readContent } from "@/lib/server";
 import { CalendarScene, DesignCard } from "@/components/public";
+export const dynamic = "force-dynamic";
 export async function generateMetadata() {
   const c = await readContent();
   return c.seo.find((s) => s.page === "home") || {};

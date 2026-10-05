@@ -9,6 +9,9 @@ import {
 } from "@/components/public";
 import { whatsapp } from "@/lib/model";
 import { BusinessLinks } from "@/components/business-links";
+
+export const dynamic = "force-dynamic";
+
 const pages = ["designs", "products", "pricing", "about", "contact", "faq"];
 export async function generateMetadata({
   params,

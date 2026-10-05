@@ -3,6 +3,7 @@ import Link from "next/link";
 import { readContent } from "@/lib/server";
 import { whatsapp } from "@/lib/model";
 import { Lightbox } from "@/components/public";
+export const dynamic = "force-dynamic";
 export async function generateMetadata({
   params,
 }: {
