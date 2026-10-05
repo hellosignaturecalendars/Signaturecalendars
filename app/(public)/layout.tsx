@@ -45,7 +45,7 @@ export default async function Layout({
       )}
       <Navigation business={c.business} />
       {children}
-      <footer>
+      <footer className="site-footer">
         <div className="footer-top">
           <div>
             <Link href="/" className="footer-brand">
