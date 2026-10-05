@@ -3,6 +3,7 @@ import { readContent, preview } from "@/lib/server";
 import { Navigation } from "@/components/public";
 import { BusinessLinks } from "@/components/business-links";
 export const dynamic = "force-dynamic";
+// v2 - dark footer + force-dynamic
 export default async function Layout({
   children,
 }: {
