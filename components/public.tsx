@@ -250,8 +250,8 @@ export function Gallery({ content: c }: { content: Content }) {
       <div className="gallery-guidance">
         <strong>Choose a calendar you like.</strong>
         <span>
-          Open ΓÇ£View DesignΓÇ¥ to see the artwork, or ΓÇ£Get a QuoteΓÇ¥ to contact us
-          about that calendar.
+          Click &quot;View Design&quot; to see the artwork, or &quot;Get a
+          Quote&quot; to contact us about that calendar.
         </span>
       </div>
       <div className="gallery-toolbar">
