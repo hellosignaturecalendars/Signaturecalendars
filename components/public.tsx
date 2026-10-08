@@ -187,7 +187,6 @@ export function CalendarScene({
           />
         </div>
       </div>
-      <div className="scene-caption">DESIGNED TO STAY WITH YOU.</div>
     </div>
   );
 }
