@@ -84,16 +84,26 @@ export function Arrow() {
 export function Navigation({ business }: { business: Content["business"] }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const brandName = /^signature calendars?$/i.test(business.name.trim())
+    ? "Signature Calendars"
+    : business.name;
   return (
     <>
-      <header className="header">
-        <Link href="/" className="brand">
+      <header className="header masthead">
+        <Link href="/" className="brand" aria-label={`${brandName} home`}>
+          <svg width="0" height="0" className="logo-filter" aria-hidden="true" focusable="false">
+            <defs>
+              <filter id="header-logo-background" colorInterpolationFilters="sRGB">
+                <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -3 -3 -3 8 0" />
+              </filter>
+            </defs>
+          </svg>
           {business.logo ? (
             <img src={business.logo} alt={business.name} />
           ) : (
             <img src="/logo.png" alt={business.name} />
           )}
-          <span className="brand-name">{business.name}</span>
+          <span className="brand-name">{brandName}</span>
         </Link>
         <button
           className="mobile-toggle"
