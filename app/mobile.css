@@ -1,0 +1,498 @@
+/* Public phone layouts only. Desktop and owner studio styles stay in their existing files. */
+@media (max-width: 720px) {
+  .header.masthead {
+    margin: 0;
+    padding: 10px 20px;
+    min-height: 82px;
+    gap: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .masthead .brand {
+    gap: 10px;
+  }
+  .masthead .brand img {
+    width: 60px;
+    height: 60px;
+  }
+  .masthead .brand-name {
+    font-size: clamp(24px, 6.4vw, 32px);
+    line-height: 1.05;
+  }
+  .masthead .mobile-toggle {
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    padding: 0;
+  }
+  .header.masthead nav {
+    padding: 16px 20px 20px;
+    gap: 6px;
+    background: var(--surface);
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 16px 32px #0f1b2d14;
+  }
+  .masthead nav a:not(.button) {
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+  .masthead nav a[aria-current="page"] {
+    background: var(--soft);
+    text-decoration: none;
+  }
+  .masthead nav .button {
+    margin-top: 8px;
+    justify-content: center;
+  }
+  .contact-ribbon {
+    padding: 6px 20px;
+    gap: 12px;
+    min-height: 44px;
+  }
+  .contact-ribbon span {
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: none;
+  }
+  .contact-ribbon a {
+    min-height: 36px;
+    font-size: 13px;
+    padding: 5px 9px;
+    border-radius: 8px;
+  }
+  #main {
+    min-width: 0;
+  }
+  #main p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  #main h1 {
+    font-size: clamp(32px, 9.4vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+    text-wrap: balance;
+  }
+  #main h2 {
+    font-size: 29px;
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+    text-wrap: balance;
+  }
+  #main .eyebrow {
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+  }
+  #main .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    padding: 26px 20px 28px;
+    gap: 14px;
+  }
+  #main .hero-copy {
+    display: contents;
+  }
+  #main .hero .eyebrow {
+    margin: 0;
+    gap: 8px;
+  }
+  #main .hero h1 {
+    margin: 0;
+  }
+  #main .hero-copy > p {
+    margin: 0;
+    max-width: none;
+  }
+  #main .hero-art {
+    order: 1;
+    padding: 0;
+    margin: 3px 0;
+  }
+  #main .hero-art > .calendar-scene {
+    height: clamp(210px, 60vw, 300px);
+    min-height: 0;
+    border-radius: 22px;
+  }
+  #main .hero-art .calendar-object {
+    width: 64%;
+    max-width: 280px;
+    margin-top: 8px;
+  }
+  #main .hero-art-note,
+  #main .hero-art .floating-note {
+    display: none;
+  }
+  #main .hero-actions {
+    order: 2;
+    margin: 0;
+    gap: 8px;
+  }
+  #main .hero-actions .button {
+    width: 100%;
+    min-height: 48px;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  #main .hero-actions .button.outline {
+    min-height: 40px;
+    padding: 7px 16px;
+    border-color: transparent;
+    background: transparent;
+  }
+  #main .hero-note {
+    order: 3;
+    margin: 0;
+    justify-content: center;
+    font-size: 12px;
+    gap: 6px;
+  }
+  #main .value-strip {
+    margin: 0 20px;
+    padding: 18px 0;
+    gap: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  #main .value-strip span {
+    gap: 7px;
+  }
+  #main .value-strip svg {
+    margin-top: 2px;
+  }
+  #main .section,
+  #main.section {
+    padding: 36px 20px;
+  }
+  #main .section-heading {
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+  #main .section-heading .eyebrow {
+    display: block;
+    margin-bottom: 8px;
+  }
+  #main .section-heading p {
+    margin-top: 12px;
+  }
+  #main .section-heading > .text-link {
+    font-size: 13px;
+    white-space: normal;
+    min-height: 44px;
+  }
+  #main .design-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  #main .design-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 0 16px 16px;
+    min-width: 0;
+  }
+  #main .design-picture {
+    margin: 0 -16px;
+    border-radius: 0;
+  }
+  #main .design-picture .calendar-scene {
+    height: clamp(250px, 72vw, 350px);
+  }
+  #main .picture-tag {
+    font-size: 11px;
+    padding: 5px 9px;
+    border-radius: 6px;
+    top: 12px;
+    left: 12px;
+  }
+  #main .design-meta {
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin: 16px 0 8px;
+    overflow-wrap: anywhere;
+  }
+  #main .design-card h3 {
+    font-size: 25px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+  #main .design-card p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  #main .design-card .muted {
+    font-size: 12px;
+  }
+  #main .card-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 14px;
+  }
+  #main .card-links a {
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+    padding: 10px 8px;
+    font-size: 12px;
+    border-radius: 9px;
+    min-height: 44px;
+  }
+  #main .card-links a:last-child {
+    border: 1px solid var(--line);
+  }
+  #main .product-duo {
+    gap: 18px;
+  }
+  #main .product-feature {
+    padding: 22px;
+    border-radius: 18px;
+  }
+  #main .product-feature .calendar-scene {
+    border-radius: 12px;
+    height: 230px;
+  }
+  #main .steps {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 20px;
+  }
+  #main .steps > div {
+    position: relative;
+    padding: 18px 18px 18px 66px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+  #main .step-num {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    padding: 0;
+    border: 0;
+    font-size: 21px;
+    line-height: 1.3;
+  }
+  #main .steps h3 {
+    font-size: 20px;
+    margin: 0 0 7px;
+  }
+  #main .steps p {
+    margin: 0;
+    font-size: 14px;
+  }
+  #main .quality-band {
+    padding: 32px 24px;
+  }
+  #main .price-preview {
+    gap: 24px;
+  }
+  #main .price-callout > div {
+    font-size: 52px;
+  }
+  #main .contact-band {
+    margin: 0 20px 32px;
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+  #main .contact-band .eyebrow {
+    color: white;
+  }
+  #main .contact-band .button {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+  }
+  #main .page-intro {
+    padding: 28px 20px 24px;
+    text-align: left;
+  }
+  #main .page-intro h1 {
+    margin: 9px 0 12px;
+    text-wrap: initial;
+  }
+  #main .page-intro p {
+    margin: 0;
+  }
+  #main .page-content {
+    padding-top: 24px;
+  }
+  #main .gallery-guidance {
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border-radius: 0 10px 10px 0;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  #main .gallery-toolbar {
+    gap: 12px;
+    padding-bottom: 16px;
+  }
+  #main .filter-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+    background: #e8ecf2;
+    padding: 4px;
+    border-radius: 12px;
+  }
+  #main .filter-tabs button {
+    padding: 8px 5px;
+    font-size: 12px;
+    border-radius: 9px;
+    white-space: nowrap;
+  }
+  #main .search {
+    background: var(--surface);
+    border-radius: 10px;
+  }
+  #main .filter-selects {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px;
+    margin: 16px 0 20px;
+  }
+  #main .filter-selects label {
+    min-width: 0;
+    width: auto;
+    font-size: 12px;
+  }
+  #main .filter-selects .custom-select {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  #main .filter-selects .custom-select-trigger {
+    min-height: 44px !important;
+    border-radius: 9px;
+    font-size: 14px;
+  }
+  #main .custom-select-trigger > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  #main .custom-select-option {
+    overflow-wrap: anywhere;
+  }
+  #main .filter-selects > span {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 12px;
+  }
+  #main .contact-layout,
+  #main .detail-layout,
+  #main .product-detail,
+  #main .about-layout {
+    gap: 24px;
+    min-width: 0;
+  }
+  #main .contact-details {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px;
+    margin-top: 18px;
+  }
+  #main .breadcrumb {
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+  #main .main-preview {
+    border-radius: 16px;
+    padding: 20px;
+  }
+  #main .main-preview img {
+    height: 260px;
+  }
+  #main .main-preview > span {
+    font-size: 12px;
+    margin-top: 14px;
+  }
+  #main .detail-layout > div > .button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 10px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  #main .contact-details h3 {
+    font-size: 23px;
+  }
+  #main .business-links > a,
+  #main .business-links > p {
+    font-size: 14px;
+  }
+  #main .inquiry-form,
+  #main .estimator {
+    padding: 20px;
+    border-radius: 16px;
+    min-width: 0;
+  }
+  #main .form-grid {
+    gap: 16px;
+  }
+  #main .inquiry-form .button,
+  #main .estimator .button {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+  }
+  #main .price-table > div {
+    font-size: 14px;
+    padding: 12px;
+    gap: 10px;
+  }
+  #main .price-table > div:first-child {
+    font-size: 10px;
+  }
+  #main dl > div {
+    grid-template-columns: 100px minmax(0, 1fr);
+    font-size: 14px;
+    gap: 12px;
+  }
+  #main dd {
+    overflow-wrap: anywhere;
+  }
+  #main .product-detail > .calendar-scene,
+  #main .about-layout > .calendar-scene {
+    height: 280px;
+    border-radius: 18px;
+  }
+  #main .faqs summary {
+    gap: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .site-footer .footer-top {
+    padding: 30px 20px 24px;
+    gap: 22px;
+  }
+  .site-footer .footer-top > div + div {
+    padding-top: 20px;
+    border-top: 1px solid #ffffff25;
+  }
+  .site-footer .footer-bottom {
+    padding: 16px 20px;
+  }
+  .customer-shortcuts {
+    gap: 8px;
+    padding: 8px 16px calc(8px + env(safe-area-inset-bottom));
+    background: #ffffff;
+  }
+  .customer-shortcuts a {
+    min-height: 48px;
+    padding: 10px 8px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+}

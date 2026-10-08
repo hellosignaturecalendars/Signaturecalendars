@@ -282,7 +282,7 @@ export function Gallery({ content: c }: { content: Content }) {
           <Search size={17} />
           <input
             aria-label="Search designs"
-            placeholder="Find your designΓÇª"
+            placeholder="Find your design..."
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
@@ -634,7 +634,7 @@ export function InquiryForm({
           minLength={5}
           maxLength={3000}
           rows={4}
-          placeholder="Tell us about your calendar, branding or packaging requirementsΓÇª"
+          placeholder="Tell us about your calendar, branding or packaging requirements..."
         />
       </label>
       <div className="honeypot" aria-hidden="true">
